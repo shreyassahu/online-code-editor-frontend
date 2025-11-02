@@ -12,10 +12,10 @@ import RunButton from './RunButton';
 import axios from 'axios';
 import { executeCode } from '../api';
 
-const CodeOutput = () => {
+const CodeOutput = ({ codeOutput }) => {
     return (
         <Box>
-            <RunButton></RunButton>
+            {codeOutput == null ? console.log("flkjf") : <p>{codeOutput.stdout}</p>}
         </Box>
     );
 }
