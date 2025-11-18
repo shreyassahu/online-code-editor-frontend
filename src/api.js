@@ -2,7 +2,7 @@ import axios from "axios";
 import { LANGUAGE_VERSIONS } from "./constants";
 
 const API = axios.create({
-  baseURL: "https://emkc.org/api/v2/piston",
+  baseURL: "http://localhost:8080/api/piston/",
 });
 
 export const executeCode = async (language, sourceCode) => {
@@ -17,3 +17,5 @@ export const executeCode = async (language, sourceCode) => {
   });
   return response.data;
 };
+
+
